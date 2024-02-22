@@ -8,7 +8,7 @@ const app = express();
 
 // Connect to MongoDB
 mongoose.connect(
-  'mongodb+srv://abiodun_mastery:Testing123@cluster0.jupgc1f.mongodb.net/?retryWrites=true&w=majority'
+  'mongodb+srv://tunderotimi:2TCiyAMGs4Mc4xH3@cluster0.aqv1uee.mongodb.net/nfp?retryWrites=true&w=majority'
 );
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
