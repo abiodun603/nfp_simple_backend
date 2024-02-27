@@ -30,7 +30,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define mongoose schema and model
 const detailsSchema = new mongoose.Schema({
-  name: String,
+  fname: String,
+  lname: String,
   email: String,
   phone: String,
   timestamp: Date,
@@ -39,11 +40,11 @@ const Details = mongoose.model('Details', detailsSchema);
 
 // Handle signup POST request
 app.post('/sign_up', async function (req, res) {
-  const { name, email, phone } = req.body;
+  const { fname, lname, email, phone } = req.body;
   const timestamp = new Date();
 
   try {
-    const newDetails = new Details({ name, email, phone, timestamp });
+    const newDetails = new Details({ fname, lname, email, phone, timestamp });
     await newDetails.save();
     console.log('Record inserted successfully');
     return res.status(200).json({ message: 'Record inserted successfully' });
