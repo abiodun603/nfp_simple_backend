@@ -7,8 +7,9 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 // Connect to MongoDB
+// mongodb+srv://tunderotimi:2TCiyAMGs4Mc4xH3@cluster0.aqv1uee.mongodb.net/nfp?retryWrites=true&w=majority
 mongoose.connect(
-  'mongodb+srv://tunderotimi:2TCiyAMGs4Mc4xH3@cluster0.aqv1uee.mongodb.net/nfp?retryWrites=true&w=majority'
+  'mongodb+srv://abiodun_mastery:Testing123@cluster0.jupgc1f.mongodb.net/nfp'
 );
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
